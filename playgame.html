@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math PlayGame</title>
+
+<!-- Coders Alecia Hayman 1908567, Sanjay Davis 2202615-->
+
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="playgame.css">
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a class="active" href="#"><i class="game-name"></i> MathMarvel Multiplication Mission</a> 
+</div>
+
+<!-- Section 1 - Registration -->
+<section id="registration">
+    <h2 style="font-family: 'Times New Roman', Times, serif; text-align: center;">Registration</h2>
+
+    <div style="text-align: left;" class="container">
+
+        <!-- Registration form -->
+        <form id="registrationForm" onsubmit="return Register()">
+            <!-- Task 1: (1) Registration-->
+
+            <!-- First Name -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required minlength="3">
+
+            <br> <!-- SPACING -->
+
+            <!-- Last Name -->
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required minlength="3">
+
+            <br> <!-- SPACING -->
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required onchange="calculateAge()">
+
+            <br> <!-- SPACING -->
+
+            <!-- Age (enabled) -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="8" max="12" readonly> <!--READONLY-->
+
+            <br> <!-- SPACING -->
+
+            <!-- Gender -->
+            <label for="gender">Gender:</label>
+            <select id="gender" required size="2">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+               </select>
+
+            <br> <!-- SPACING -->
+            <br>
+
+            <!-- Email input with instructions -->
+            <label for="email"> Email:<strong> <i style="color: black;"> (Only '@gmail.com' emails are accepted!)</i></strong></label>
+            <input type="email" id="email" required oninput="validateEmail()">
+
+            <!-- Email error message -->
+            <p id="emailErrorMessage" style="color: red;"></p>
+
+            <!-- Task 3: Register button disables, End and Start buttons enabled -->
+            <button id="registerButton" onclick="Register()">Register</button>
+              <!-- Reset button for the registration form -->
+                 <button type="reset" id="resetButton">Reset</button>
+
+        </form>
+
+        <!-- Task 5: Start button enables Play area, answer input, Accept button, and Next button -->
+        <button id="startButton" onclick="PlayGame()">Start</button>
+    
+    </div>
+</section>
+
+<!-- Section 2 - Play -->
+<section id="play">
+    <h2 style="font-family: 'Times New Roman', Times, serif; text-align: center;">Play</h2>  
+
+    <!-- Task 7: CheckAnswer button --> 
+    <div id="PlayGame" aria-disabled="true">
+        <h2 style="font-family: Poppins , sans-serif;">Answer each question correctly: </h2>
+        <br> <br>
+        <!-- Questions -->
+        <div id="equation"> </div>
+        <input type="text" id="userAnswer" placeholder="Your Answer" disabled> 
+        <br> <br>
+        <button id="checkButton" onclick="checkAnswer()" disabled>Check Answer</button>
+        <p id="status"></p>
+        <!-- Task 8: Next button -->
+        <button id="nextButton" onclick="PlayGame()" disabled>Next</button>
+        <!-- Task 11: End button -->
+        <button id="endButton" onclick="End()" value="End">End</button>
+    </div>
+</section>
+
+<!-- Section 3 - Results area -->
+<section id="result">
+    <h2 style="font-family: 'Times New Roman', Times, serif; text-align: center;">Results Area</h2>   
+    <!-- Task 12: New display area showallplayers -->
+  
+        <textarea style="width: 350px; height: 150px; margin: 0 auto; display: block;" id="showpercentage" readonly></textarea>
+   
+    <br> <br>
+    <!-- Task 16: PercentageScore button -->
+    <button id="percentageScoreButton" onclick="findPercentageScore()">Percentage Score</button>
+</section>
+
+<!-- Leaderboard -->
+<h1 style="font-family: 'Times New Roman', Times, serif; text-align: center;">Leaderboard</h1>
+<br> <br>
+
+    <textarea style="width: 350px; height: 150px; margin: 0 auto; display: block;" id="showallplayers" readonly></textarea>
+
+<br> <br>
+<hr>
+
+<!-- Player Statistics Charts -->
+<h1>Player Statistics</h1>
+<div id="showcharts"></div>
+
+<script src="../Desktop/Mathgame/playgame.js"></script>
+</body>
+</html>

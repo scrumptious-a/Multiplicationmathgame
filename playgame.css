@@ -1,0 +1,146 @@
+/* Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  background-color: #D2FBA4; /* Set background color */
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: #D2FBA4; /* Set text color */
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000; /* Change background color on hover */
+}
+
+.active {
+  background-color: #000; /* Set background color for active state */
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  height: 100vh; /* Adjust as needed */
+}
+
+/* Styles for the container */
+.container {
+  width: 300px;
+  margin: 20px auto; /* Add margin for better spacing */
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #B2D2A4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+button {
+  display: inline-block; /* Use inline-block for buttons to be side by side */
+  padding: 5px 12px; /* Adjust padding for a more balanced look */
+  margin-bottom: 10px;
+  background-color: #104210;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid black; /* Adjust border thickness */
+  font-weight: bold;
+  border-radius: 6px; /* Smaller border-radius for a slightly rounded look */
+  transition: background-color 0.3s ease;
+  color: black;
+}
+
+/* Apply space between inputs */
+input {
+  margin-bottom: 10px; /* Adjust the value to control the space */
+}
+
+label {
+  margin-bottom: 5px; /* Adjust the value to control the space */
+}
+
+/* Styles for button hover effect */
+button:hover {
+  background-color: white;
+}
+
+input {
+  padding: 1px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#findPercentageScore,
+#generateMultiplicationQuestion {
+  font-size: 20px;
+  color: #2ecc71;
+}
+
+/* Set container center */
+#PlayGame,
+#showpercentage {
+  margin: auto; /* Center horizontally */
+  position: center;
+  top: 0; /* Center vertically */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 350px; /* Limit container width */
+  height: 45%; /* Set container height */
+  background-color: whitesmoke; /* Set container background color */
+  padding: 20px; /* Add container padding */
+  border-radius: 10px; /* Set container border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add container box shadow */
+}
+
+/* Font size 18px, margin top 10px */
+#status {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#question {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+#playResultsArea {
+  display: none; /* Hide the play and results area initially */
+}
+
+#checkAnswerButton,
+#someOtherButton {
+  pointer-events: none; /* Disable click events for buttons in the disabled area */
+  opacity: 0.5; /* Reduce opacity for a visual indication that the area is disabled */
+}
+
+.reset-button {
+  display: inline-block; /* Use inline-block for buttons to be side by side */
+  padding: 5px 12px; /* Adjust padding for a more balanced look */
+  margin-bottom: 10px;
+  background-color: rgb(192, 110, 110);
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid black; /* Adjust border thickness */
+  font-weight: bold;
+  border-radius: 6px; /* Smaller border-radius for a slightly rounded look */
+  transition: background-color 0.3s ease;
+  color: black;
+}
